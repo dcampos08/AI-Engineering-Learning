@@ -59,6 +59,26 @@ If an action is both allowed and denied, **deny wins**. Put shared rules in `.cl
 - Skip the plan step for basic edits like renaming a variable or fixing a typo.
 - The reason to do this is cost: the approach is cheap to steer while it's still just a plan.
 
+## Work a plan in Plan Mode
+
+Enter Plan Mode with `Shift+Tab` (press until you reach it). Claude researches and proposes; it doesn't edit.
+
+Read the plan against three questions:
+
+1. Is the approach sound?
+2. Are its assumptions right — the tools, the libraries, where things live?
+3. Is anything missing?
+
+Then take one of three moves:
+
+| Move | What you do |
+| --- | --- |
+| Approve | Accept the plan and let it execute |
+| Edit | Stay in Plan Mode and say what you want changed, the way you'd brief a colleague. Claude rewrites to match. Loop as many times as needed |
+| Rethink | Send it back to reconsider the approach entirely |
+
+The hard part is knowing when to stop looping. Approve too early and you miss mistakes that are cheap now and expensive later. Loop too long and you've spent the time you were trying to save, which was the point of using Claude Code at all.
+
 ## Running tasks
 
 - Tasks can run in the foreground or background.

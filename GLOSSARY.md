@@ -7,6 +7,11 @@ Terms and definitions collected while learning. Keep entries short and in my own
 - **Original repository** — the canonical upstream repo owned by its maintainer(s).
 - **Fork** — a personal copy of another repository hosted under your own account. Lets you make changes and propose them back via pull request.
 - **Local clone** — a copy of a repository downloaded to your machine with `git clone`.
+- **`git clone`** — the one-time download that creates the local folder. You clone a given repo once; after that you never clone it again unless you delete the folder.
+- **`git checkout`** — switches which version of the files is in your working folder, by pointing the repo at a different branch or commit. It downloads nothing and creates no new folder; it rewrites the contents of the folder you're already in. (`git switch` is the newer, narrower command for the branch-switching case.)
+- **`git pull`** — fetches new commits from the remote and merges them into your current branch. This, not `checkout`, is what gets you an updated copy of someone else's work.
+- **`git fetch`** — downloads new commits from the remote without changing your working files. `git pull` is roughly `fetch` plus merge.
+- **Remote** — the hosted repository your local clone is linked to (usually on GitHub), named `origin` by default. `git remote -v` prints its URL, which is how you confirm what a local folder is a clone of.
 - **Branch** — a movable pointer to a line of commits, used to develop changes in isolation from the main line.
 - **Feature branch** — a branch created for a specific piece of work, kept separate until it's ready to merge.
 - **Pull request (PR)** — a proposal to merge changes from one branch (often on a fork) into another repository or branch, with review and discussion.
@@ -32,6 +37,12 @@ Terms and definitions collected while learning. Keep entries short and in my own
 - **Session** — one conversation with Claude Code, running in the folder you started it in. That folder is Claude's workspace for the whole session. Claude saves sessions on exit so they can be resumed.
 - **Prompt** — a message you send Claude: an instruction or question, written in plain everyday language.
 - **Diff** — the side-by-side view of your current file next to Claude's proposed change, shown before anything is written. You accept, reject, or ask for a different approach.
+
+## Claude Code — planning
+
+- **Plan Mode** — a mode where Claude researches and proposes an approach instead of editing files. Nothing is written while you're in it. Reach it by pressing `Shift+Tab` until the mode indicator shows it.
+- **Plan** — the written approach Claude produces in Plan Mode. It can look convincing and still be wrong, so reading it critically is your job, not a formality.
+- **The three moves on a plan** — approve it, edit it, or send it back to rethink the approach. Editing means staying in Plan Mode and describing what you want; Claude rewrites the plan to match, as many times as you need.
 
 ## Claude Code — sessions
 

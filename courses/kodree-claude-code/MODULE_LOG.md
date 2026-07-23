@@ -1,6 +1,6 @@
 # Kodree Claude Code — Module Log
 
-Per-module notes. Reached **Part 19** of the course.
+Per-module notes. Reached **Part 21** of the course.
 
 > **Note:** Parts 1–17 are captured together in one consolidated, topic-grouped backfill note (see **Units 1–17 (consolidated backfill)** below), assembled on 2026-07-23 from course content Daniel pasted. It is a topical summary of what the course covered, not separate per-part detail. Part 18 keeps its own detailed entry. From Part 19 onward, capture per unit.
 
@@ -117,3 +117,32 @@ _Assembled 2026-07-23 from pasted course content. Grouped by topic rather than b
 
 ### What confused me
 - Nothing major. This was a fairly basic module.
+
+## Part 20: Entering and reading a plan in plan mode
+
+### What I learned
+- In Plan Mode, Claude researches and proposes instead of editing. The course called this a safety net in action.
+- A plan can look convincing and still be wrong, so reading it critically is my job.
+
+### Commands or techniques
+- Start a new session in Plan Mode by pressing `Shift+Tab` until you reach it.
+- Review a plan against three questions: (1) Is the approach sound? (2) Are its assumptions right — the tools, the libraries, where things live? (3) Is anything missing?
+
+## Part 21: Approving, editing and looping on a plan
+
+### What I learned
+- A plan gives you three moves: approve it, edit it, or send it back to rethink the approach.
+- To change a plan, stay in plan mode and tell Claude what you want the same way you'd brief a colleague. Claude rewrites the plan to match, and you can loop as many times as you need.
+- The hard part of looping isn't doing it, it's knowing when to stop. Approve too early and you may miss mistakes; take too long and you lose the time savings that were the point of using Claude Code.
+
+### What I did
+- Worked an exercise that instructed me to clone a repo used in the course. I found I already had it cloned and only needed to check it out.
+
+### What confused me
+- Git mechanics. The plan-mode material made sense; the repo handling did not fully click.
+- How to tell whether I already have a repo cloned.
+- What `checkout` actually means. My assumption was that it makes an updated local copy.
+
+### Follow-up questions
+- How do I check whether a repo is already cloned on my machine?
+- What does `git checkout` do, precisely?

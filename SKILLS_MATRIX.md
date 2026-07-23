@@ -31,7 +31,7 @@ Self-assessed skill levels. All scores are **initial self-assessments** and will
 
 | Skill | Score | Evidence |
 | --- | --- | --- |
-| Claude Code | 3 | Guided course exercise: used inside a real repository; ran `/init` to draft a project `CLAUDE.md`; created and refined a project-level `CLAUDE.md`; created `.claude/settings.json` with allow/ask/deny rules; used `/memory` and `/permissions` to verify configuration; practiced foreground and background tasks with Control+B. Reflects guided practice, not yet repeated independent use. |
+| Claude Code | 3 | Guided course exercise: used inside a real repository; ran `/init` to draft a project `CLAUDE.md`; created and refined a project-level `CLAUDE.md`; created `.claude/settings.json` with allow/ask/deny rules; used `/memory` and `/permissions` to verify configuration; practiced foreground and background tasks with Control+B. In a brief course exercise, entered Plan Mode, read a plan, sent it back for changes, and approved the revised version. Reflects guided practice, not yet repeated independent use. |
 | Configuration and permissions (Claude Code) | 3 | Guided course exercise: wrote `.claude/settings.json` permission rules and verified them with `/permissions`; understand the difference between `~/.claude/CLAUDE.md` and a repository `CLAUDE.md`. Reflects guided practice, not yet repeated independent use. |
 
 ## Machine learning and evaluation

@@ -1,6 +1,6 @@
 # Kodree Claude Code — Key Takeaways
 
-Distilled lessons from the course so far (through Part 19). These are verified takeaways, not a summary of undocumented modules.
+Distilled lessons from the course so far (through Part 21). These are verified takeaways, not a summary of undocumented modules.
 
 ## Workflow discipline
 
@@ -8,12 +8,16 @@ Distilled lessons from the course so far (through Part 19). These are verified t
 - **`package.json` is the source of truth for commands.** What `npm test`, `npm run lint`, and `npm run dev` actually do is defined there.
 - **Use feature branches.** Do work on a branch created and switched to for that task, not on the main line.
 - **Plan before executing on anything non-trivial.** Have Claude lay out its approach first, push back on one point, then let it work. Trivial edits like a rename or a typo fix don't need it.
+- **Plan Mode (`Shift+Tab`) is the safety net:** Claude researches and proposes, and nothing gets written. Read every plan against three questions — is the approach sound, are its assumptions right, is anything missing.
+- **A plan has three moves: approve, edit, or send back to rethink.** To edit, stay in Plan Mode and brief Claude the way you'd brief a colleague; it rewrites to match, as many rounds as you need.
+- **Know when to stop looping.** Approving too early misses mistakes; looping too long burns the time savings that were the reason to use Claude Code.
 
 ## Git and GitHub
 
 - Know the four distinct things: original repository, fork, local clone, and branch. They are not interchangeable.
 - The core loop: `git status` → `git add` → `git diff --cached` (review what's staged) → `git commit` → `git push`.
 - Contributing back to an upstream project goes through a pull request from your fork to the original repo.
+- **Clone once, checkout often.** `git clone` creates the local folder one time; `git checkout` only switches which version of the files is in that folder, and `git pull` is what fetches newer work. When instructions say "clone the repo", check `git remote -v` in the folder you suspect you already have it in first.
 
 ## Sessions and context
 
