@@ -1,15 +1,14 @@
 # Kodree Claude Code — Module Log
 
-Per-module notes. Reached **Part 18** of the course.
+Per-module notes. Reached **Part 19** of the course.
 
 > **Note:** Parts 1–17 are captured together in one consolidated, topic-grouped backfill note (see **Units 1–17 (consolidated backfill)** below), assembled on 2026-07-23 from course content Daniel pasted. It is a topical summary of what the course covered, not separate per-part detail. Part 18 keeps its own detailed entry. From Part 19 onward, capture per unit.
 
-## Backfill tracker
+## Backfill tracker (closed)
 
 - [x] Parts 1–17 — covered together in the consolidated backfill note below (topical summary, not per-part detail).
-- [x] Part 18 — documented (detailed entry below).
 
-_From Part 19 onward, add a per-unit entry and check its box. Use [templates/lesson-note.md](../../templates/lesson-note.md) if a deeper standalone note is useful._
+Nothing is pending. Parts 18 onward were captured as they happened, so they are lesson entries rather than backfill. Use [templates/lesson-note.md](../../templates/lesson-note.md) if a deeper standalone note is useful.
 
 ## Lesson entries
 
@@ -104,3 +103,17 @@ _Assembled 2026-07-23 from pasted course content. Grouped by topic rather than b
 
 ### What confused me
 - Why `git diff` did not initially show my new files.
+
+## Part 19: Plan then execute
+
+### What I learned
+- The course pushes a plan-then-execute mindset: have Claude research and lay out its approach before it makes a batch of changes.
+- Not every task needs a plan step. For something basic like renaming a variable or fixing a typo, planning is overkill.
+- Steering the approach while it's still cheap to steer is the whole point. The back-and-forth happens before a single change exists.
+
+### Commands or techniques
+- Ask Claude: "Before you change anything, walk me through how you'd approach this."
+- Read the plan, then push back on one point (a different approach, or an edge case it missed) and watch it adjust, all before any code exists.
+
+### What confused me
+- Nothing major. This was a fairly basic module.

@@ -52,6 +52,13 @@ If an action is both allowed and denied, **deny wins**. Put shared rules in `.cl
 - Start a fresh session for an unrelated task. When a session's memory gets cluttered, `/clear` empties the conversation but keeps you in place, which often sharpens answers.
 - `/context` shows how full the working memory is. Don't confuse `/clear` (empty, stay), `/exit` (leave), and `--continue` (reopen).
 
+## Plan before executing
+
+- On anything non-trivial, get the approach before the work: "Before you change anything, walk me through how you'd approach this."
+- Read the plan, then push back on one point (a different approach, or an edge case it missed) and let it adjust before any code exists.
+- Skip the plan step for basic edits like renaming a variable or fixing a typo.
+- The reason to do this is cost: the approach is cheap to steer while it's still just a plan.
+
 ## Running tasks
 
 - Tasks can run in the foreground or background.

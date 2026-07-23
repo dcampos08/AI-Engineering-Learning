@@ -1,12 +1,13 @@
 # Kodree Claude Code — Key Takeaways
 
-Distilled lessons from the course so far (through Part 18). These are verified takeaways, not a summary of undocumented modules.
+Distilled lessons from the course so far (through Part 19). These are verified takeaways, not a summary of undocumented modules.
 
 ## Workflow discipline
 
 - **Establish a baseline before changing anything.** Run tests and lint first so you know the project starts green and can attribute any breakage to your changes.
 - **`package.json` is the source of truth for commands.** What `npm test`, `npm run lint`, and `npm run dev` actually do is defined there.
 - **Use feature branches.** Do work on a branch created and switched to for that task, not on the main line.
+- **Plan before executing on anything non-trivial.** Have Claude lay out its approach first, push back on one point, then let it work. Trivial edits like a rename or a typo fix don't need it.
 
 ## Git and GitHub
 
