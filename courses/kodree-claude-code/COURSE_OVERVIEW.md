@@ -8,7 +8,7 @@ A hands-on course on using Claude Code effectively for real software work: setti
 
 - **In progress** — reached **Part 18**.
 - Completed the assignment "Set up Claude Code on a real project."
-- **Backfill pending:** detailed notes for Modules 1–18 have not yet been reconstructed. See [MODULE_LOG.md](MODULE_LOG.md).
+- **Backfill status:** Units 1–17 are captured in a consolidated topical note (a summary of what the course covered, not per-part detail); Part 18 has its own detailed entry. See [MODULE_LOG.md](MODULE_LOG.md).
 
 ## Files in this folder
 

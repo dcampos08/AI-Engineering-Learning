@@ -27,15 +27,61 @@ Terms and definitions collected while learning. Keep entries short and in my own
 - **Test file discovery** — Node/test runners can automatically find test files by convention, such as `tests/users.test.js`.
 - **Working baseline** — running tests and lint before changing a project, so you know the starting state is green before you touch anything.
 
-## Claude Code
+## Claude Code — general concepts
 
-- **`~/.claude/CLAUDE.md`** — the user-level (global) instructions that apply across all projects.
-- **Repository `CLAUDE.md`** — project-level instructions that apply only within that repo. Complements the global file.
+- **Session** — one conversation with Claude Code, running in the folder you started it in. That folder is Claude's workspace for the whole session. Claude saves sessions on exit so they can be resumed.
+- **Prompt** — a message you send Claude: an instruction or question, written in plain everyday language.
+- **Diff** — the side-by-side view of your current file next to Claude's proposed change, shown before anything is written. You accept, reject, or ask for a different approach.
+
+## Claude Code — sessions
+
+- **`/exit`** — closes Claude Code cleanly and returns you to your normal terminal. Ends the conversation, not the work; approved changes are already saved. `Ctrl+D` does the same.
+- **`claude --continue` / `-c`** — reopens your most recent session with its context intact, so you carry on mid-thought. (Launched from the shell, but it's about re-entering a session.)
+- **`/resume`** — lists your past sessions so you can reopen a specific earlier one (not just the last).
+- **`/help`** — shows the full list of slash commands available inside a session.
+- **`Ctrl+B`** — moves a running command to the background so the session frees up while the command keeps going.
+- **`/bashes`** — lists the background commands currently running. Each backgrounded command gets an ID and is monitored, so you can check its output without stopping it.
+
+## Claude Code — command line
+
+- **Headless / one-shot mode** — running Claude for a single self-contained question that prints one answer and returns you to the terminal. Also how Claude fits into scripts and automation.
+- **`claude -p '...'`** — the `-p` flag runs a one-shot prompt: Claude answers once and exits.
+- **Pipe (`|`)** — feeds one command's output into the next. Example: `cat error.log | claude -p 'explain this error'` sends the file's contents into a one-shot question.
+- **`--output-format json`** — makes a one-shot answer come back as structured JSON that another program can parse. The doorway to automated workflows.
+
+## Claude Code — context and memory
+
+- **Context** — Claude's working memory, a limited amount held in mind at once. When it fills up (often after a long, wandering session), answers can drift.
+- **`/context`** — shows how full the current context is.
+- **`/clear`** — empties the conversation but keeps you in the same session (a clean slate). You lose the old chat. Distinct from `/exit` (leaves entirely) and `claude --continue` (reopens the last conversation).
+
+## Claude Code — configuration
+
+- **`~/.claude/CLAUDE.md`** — the user-level (global/personal) instructions that apply across all your projects and are seen only by you.
+- **Repository `CLAUDE.md`** — project-level instructions committed to the repo, so every teammate's Claude reads the same rules. Complements the global file.
+- **Nested `CLAUDE.md`** — a `CLAUDE.md` inside a subfolder, holding rules for that one part of the project. Not read at session start; Claude picks it up only when it works with a file in that folder, and its rules layer on top of what's already loaded. Guideline: put a rule in the smallest place where it's true.
 - **`/init`** — drafts a project `CLAUDE.md` by inspecting the codebase. Most useful once a codebase has enough structure to inspect.
-- **`.claude/settings.json`** — project configuration, including permission rules.
-- **Permission rules (allow / ask / deny)** — control which actions Claude Code can take automatically, must ask about, or is blocked from.
-- **`/memory`** — command to view and verify what Claude Code has in memory / configuration.
-- **`/permissions`** — command to view and verify the active permission rules.
-- **Foreground vs background tasks** — Claude Code can run tasks in the foreground or background; Control+B backgrounds a running task.
+- **`#` rule shortcut** — start a line with `#` and type a rule; Claude saves it into a `CLAUDE.md` (asking which file). Turns an in-the-moment correction into a lasting rule.
+- **`.claude/settings.json`** — shared project configuration, committed to the repo (including permission rules), so the whole team shares the same guardrails.
+- **`.claude/settings.local.json`** — local configuration that stays on your machine for personal tweaks.
+- **Permission rules (allow / ask / deny)** — control which actions Claude Code can take automatically, must ask about, or is blocked from. If an action is both allowed and denied, **deny wins**. Deny is the hard block; deny anything irreversible or sensitive.
+- **`/memory`** — lists every `CLAUDE.md` currently loaded and lets you open them to edit. First check when a rule is or isn't being followed.
+- **`/permissions`** — shows and edits the active permission rules.
+- **Foreground vs background tasks** — Claude Code can run tasks in the foreground or background; `Ctrl+B` backgrounds a running task.
+
+## Claude Code — output styles
+
+- **Output style** — how Claude talks to you while it works (same underlying Claude). Loads when a session starts, so a change applies next session or right after `/clear`; then stays with the project.
+- **Default** — quick and to the point; makes the change and moves on. Best when you know what you want.
+- **Explanatory** — does the work and explains its choices with short "Insights". Best for understanding an unfamiliar codebase.
+- **Learning** — hands-on; explains as it goes and leaves small pieces for you to write, marked `TODO(human)`. Best for building your own skills.
+- **`/config`** — menu where you set the output style (Output style → choose one). Can also be set with `"outputStyle": "..."` in `.claude/settings.local.json`.
+- **`/output-style:new`** — creates a custom output style from a description of the voice you want.
+
+## Claude Code — beyond CLAUDE.md (introduced, covered later)
+
+- **Hook** — an automatic action that fires on an event, often to block something (e.g. stopping a commit that contains a secret before it's saved).
+- **Skill** — a saved set of steps Claude can run on demand, the same way every time (e.g. a "scaffold a new API endpoint our way" routine triggered by name).
+- **MCP connection** — plugs Claude into an outside system so it can read or act there (e.g. fetching a customer's record from your database).
 
 _Add AI/ML terms (evaluation, RAG, agents, MLOps, etc.) here as they're learned._
