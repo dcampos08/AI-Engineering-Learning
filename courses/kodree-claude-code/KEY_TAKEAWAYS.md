@@ -1,6 +1,6 @@
 # Kodree Claude Code — Key Takeaways
 
-Distilled lessons from the course so far (through Part 21). These are verified takeaways, not a summary of undocumented modules.
+Distilled lessons from the course so far (through Part 22). These are verified takeaways, not a summary of undocumented modules.
 
 ## Workflow discipline
 
@@ -57,6 +57,12 @@ Distilled lessons from the course so far (through Part 21). These are verified t
 - **`.claude/settings.json` controls permissions** with allow, ask, and deny rules.
 - **Verify configuration** with `/memory` and `/permissions` rather than assuming it took effect.
 - **Foreground vs background tasks** — Control+B backgrounds a running task.
+
+## Model selection
+
+- **Match the model tier to the judgment a task needs.** Opus is most capable but slowest and priciest; Haiku is fastest and cheapest and shines on simple, well-defined work; Sonnet sits in between and is the sensible default for most real work.
+- **Don't default to Opus for everything "to be safe."** That just means paying more and waiting longer for work that didn't need it.
+- **Switch mid-session with `/model <name>`** rather than starting a new session, moving up the tier as a task gets harder and down as it gets simpler.
 
 ## Promoted to playbooks
 

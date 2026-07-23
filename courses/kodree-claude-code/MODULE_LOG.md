@@ -1,6 +1,6 @@
 # Kodree Claude Code — Module Log
 
-Per-module notes. Reached **Part 21** of the course.
+Per-module notes. Reached **Part 22** of the course.
 
 > **Note:** Parts 1–17 are captured together in one consolidated, topic-grouped backfill note (see **Units 1–17 (consolidated backfill)** below), assembled on 2026-07-23 from course content Daniel pasted. It is a topical summary of what the course covered, not separate per-part detail. Part 18 keeps its own detailed entry. From Part 19 onward, capture per unit.
 
@@ -146,3 +146,25 @@ _Assembled 2026-07-23 from pasted course content. Grouped by topic rather than b
 ### Follow-up questions
 - How do I check whether a repo is already cloned on my machine?
 - What does `git checkout` do, precisely?
+
+## Part 22: Model tradeoffs: Opus vs. Sonnet vs. Haiku
+
+### What I learned
+- The lesson covered the different Anthropic models (as of 7/23/26). Opus is the most capable, but is the slowest and priciest. Haiku is the fastest and cheapest, and shines on simpler, well-defined work. Sonnet sits in between and handles most real work well — it's the sensible default.
+- The common trap is reaching for Opus on everything to be safe, which just means paying more (especially at scale) and waiting longer for work that didn't need it.
+- The more judgment a task demands, the further up the model tier you should reach; the more mechanical the task, the further down.
+
+### What I did
+- Ran an exercise comparing Haiku vs. Sonnet on summarizing a line of code, and found the responses roughly similar.
+
+### Follow-up questions
+- How do you monitor model performance over time and make the determination to switch models, to ensure the right model is being used for the right task?
+
+## Part 22: Switching models mid-session
+
+### What I learned
+- You can switch models mid-session by typing `/model` followed by the name of the model.
+- The recommendation is to switch up or down within a session depending on the difficulty of the task at hand.
+
+### Commands or techniques
+- `/model <model name>` — switch models mid-session.

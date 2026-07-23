@@ -89,6 +89,11 @@ Terms and definitions collected while learning. Keep entries short and in my own
 - **`/config`** — menu where you set the output style (Output style → choose one). Can also be set with `"outputStyle": "..."` in `.claude/settings.local.json`.
 - **`/output-style:new`** — creates a custom output style from a description of the voice you want.
 
+## Claude Code — models
+
+- **Opus / Sonnet / Haiku** — the three model tiers. Opus is the most capable but slowest and priciest. Haiku is the fastest and cheapest, and shines on simpler, well-defined work. Sonnet sits in between and handles most real work well — the sensible default.
+- **`/model <model name>`** — switches models mid-session. Move up the tier when a task needs more judgment, and down when it's mechanical.
+
 ## Claude Code — beyond CLAUDE.md (introduced, covered later)
 
 - **Hook** — an automatic action that fires on an event, often to block something (e.g. stopping a commit that contains a secret before it's saved).

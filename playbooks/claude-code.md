@@ -79,6 +79,12 @@ Then take one of three moves:
 
 The hard part is knowing when to stop looping. Approve too early and you miss mistakes that are cheap now and expensive later. Loop too long and you've spent the time you were trying to save, which was the point of using Claude Code at all.
 
+## Choosing a model
+
+- Three tiers: **Opus** (most capable, slowest, priciest), **Sonnet** (the sensible default for most real work), **Haiku** (fastest, cheapest, good for simple well-defined work).
+- Match the tier to how much judgment the task needs — the more judgment required, the higher the tier; the more mechanical the task, the lower. Defaulting to Opus for everything "to be safe" just costs more and takes longer without a benefit.
+- Switch mid-session with `/model <model name>` instead of starting a new session — move up when a task gets harder, down when it gets simpler.
+
 ## Running tasks
 
 - Tasks can run in the foreground or background.
