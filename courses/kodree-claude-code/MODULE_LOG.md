@@ -1,6 +1,6 @@
 # Kodree Claude Code — Module Log
 
-Per-module notes. Reached **Part 22** of the course.
+Per-module notes. Reached **Part 25** of the course.
 
 > **Note:** Parts 1–17 are captured together in one consolidated, topic-grouped backfill note (see **Units 1–17 (consolidated backfill)** below), assembled on 2026-07-23 from course content Daniel pasted. It is a topical summary of what the course covered, not separate per-part detail. Part 18 keeps its own detailed entry. From Part 19 onward, capture per unit.
 
@@ -168,3 +168,48 @@ _Assembled 2026-07-23 from pasted course content. Grouped by topic rather than b
 
 ### Commands or techniques
 - `/model <model name>` — switch models mid-session.
+
+## Part 23: The opusplan hybrid
+
+### What I learned
+- Opusplan is a built-in hybrid that uses Opus to plan (the part that needs the most reasoning), then hands off to Sonnet to execute the plan (the part that needs steady work).
+- This setup uses the strong model where it matters and the faster, cheaper model for the bulk of the work.
+
+### Commands or techniques
+- Start a session with `claude --model opusplan`, or pick opusplan from the `/model` list.
+
+## Part 24: Managing Context and Cost Across the Loop
+
+### What I learned
+- Context is a resource: everything Claude knows in a session lives in a fixed-sized window, and every new message carries a lot with it, so cluttered sessions cost more per turn and, past a point, get less sharp.
+- Managing context is described as the last habit of working with intent.
+- Reading big files and long outputs fill the window the fastest, which is why feeding Claude only what the task needs keeps a session lean.
+- Claude does auto-compact when the window nearly fills, but waiting for that is the worst case, since it strikes mid-moment when you don't choose it. Better to manage as you go.
+
+### Commands or techniques
+- `/context` — shows how full the window is and what is taking space.
+- `/clear` — wipes the conversation to zero; use when switching to unrelated work.
+- `/compact` — summarizes the session, keeping key state (decisions, file paths, what's left) while dropping the noise.
+
+### Follow-up questions
+- Better understand how Claude chooses what to keep when `/compact` runs, and whether I'd have a say in that within a session.
+
+## Part 25: How Claude works with your repo: status, diffs, history
+
+### What I learned
+- The lesson covered reading changes, writing commit messages, drafting pull request descriptions, reviewing code, and untangling conflicts.
+- Claude reads your repo on demand: asking "what have I changed?" runs the equivalent of `git status` and `git diff` and explains the changes in plain English.
+- Claude can do git archaeology — searching past commits and their diffs to answer how the code got the way it is.
+
+### What I did
+- Forked the course-provided repo (mate-academy/git-playground-task1) and cloned it.
+- Made a few edits, then created a `notes.md` file predicting what I changed from memory.
+- Had Claude summarize what I changed and compared the results against my prediction.
+- Had Claude commit the changes onto a new branch called `read-repo` and create a PR against the main repo.
+
+### What confused me
+- The git mechanics overall: cloning, forking, committing changes, and creating PRs. Still fuzzy on what I'm actually doing during these steps.
+- Using VSCode: having to look across Terminal screens caused mechanical issues. Would like a shortcut to make this easier.
+
+### Follow-up questions
+- Is there a shortcut to make it easier to work across Terminal screens in VSCode?

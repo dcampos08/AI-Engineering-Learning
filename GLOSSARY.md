@@ -21,6 +21,7 @@ Terms and definitions collected while learning. Keep entries short and in my own
 - **`git diff --cached`** — shows the changes that are staged (about to be committed).
 - **`git commit`** — records staged changes as a new commit.
 - **`git push`** — uploads local commits to a remote repository.
+- **Git archaeology** — using Claude to search past commits and their diffs to answer how the code got the way it is.
 
 ## Node and npm
 
@@ -65,6 +66,7 @@ Terms and definitions collected while learning. Keep entries short and in my own
 - **Context** — Claude's working memory, a limited amount held in mind at once. When it fills up (often after a long, wandering session), answers can drift.
 - **`/context`** — shows how full the current context is.
 - **`/clear`** — empties the conversation but keeps you in the same session (a clean slate). You lose the old chat. Distinct from `/exit` (leaves entirely) and `claude --continue` (reopens the last conversation).
+- **`/compact`** — summarizes the session, keeping key state (decisions, file paths, what's left) while dropping the noise, instead of wiping it entirely like `/clear`. Proactive alternative to waiting for auto-compact.
 
 ## Claude Code — configuration
 
@@ -93,6 +95,7 @@ Terms and definitions collected while learning. Keep entries short and in my own
 
 - **Opus / Sonnet / Haiku** — the three model tiers. Opus is the most capable but slowest and priciest. Haiku is the fastest and cheapest, and shines on simpler, well-defined work. Sonnet sits in between and handles most real work well — the sensible default.
 - **`/model <model name>`** — switches models mid-session. Move up the tier when a task needs more judgment, and down when it's mechanical.
+- **Opusplan** — a built-in hybrid mode: Opus plans, then Sonnet executes the plan. Start with `claude --model opusplan` or pick it from the `/model` list.
 
 ## Claude Code — beyond CLAUDE.md (introduced, covered later)
 

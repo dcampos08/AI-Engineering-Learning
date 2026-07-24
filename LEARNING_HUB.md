@@ -4,7 +4,7 @@ The front door to this repository. Start here.
 
 ## Current focus
 
-- **Kodree Claude Code course** — reached Part 22. Completed the assignment "Set up Claude Code on a real project." Units 1–17 are now captured in a consolidated topical backfill note; Part 18 has its own detailed entry. Next: continue from Part 23, capturing per unit.
+- **Kodree Claude Code course** — reached Part 25. Completed the assignment "Set up Claude Code on a real project." Units 1–17 are now captured in a consolidated topical backfill note; Part 18 has its own detailed entry. Next: continue from Part 26, capturing per unit.
 
 ## Navigation
 
@@ -23,7 +23,7 @@ The front door to this repository. Start here.
 
 | Course | Status | Notes |
 | --- | --- | --- |
-| [Kodree Claude Code](courses/kodree-claude-code/COURSE_OVERVIEW.md) | In progress (Part 22) | Units 1–17 backfilled (consolidated note); Parts 18–19 documented |
+| [Kodree Claude Code](courses/kodree-claude-code/COURSE_OVERVIEW.md) | In progress (Part 25) | Units 1–17 backfilled (consolidated note); Parts 18–19 documented |
 
 ## Playbooks
 
@@ -43,5 +43,6 @@ Currently working through the Kodree Claude Code course. Longer-term resource pl
 - Captured Part 19 (plan-then-execute) and promoted it to the Claude Code playbook and KEY_TAKEAWAYS.md. Extended `/capture-lesson` to sync the course-position status here, so the part number no longer drifts between captures (2026-07-23).
 - Captured Parts 20–21 (Plan Mode, and the approve/edit/rethink loop) and promoted them to the Claude Code playbook, GLOSSARY.md, and KEY_TAKEAWAYS.md. Also resolved a clone-vs-checkout confusion into the Git playbook and glossary (2026-07-23).
 - Captured Part 22 (model tradeoffs across Opus/Sonnet/Haiku, and switching models mid-session with `/model`) and promoted it to the Claude Code playbook, GLOSSARY.md, and KEY_TAKEAWAYS.md (2026-07-23).
+- Captured Parts 23–25 (opusplan hybrid, proactive context management with `/compact`, and reading repo state including git archaeology) and promoted them to both playbooks, GLOSSARY.md, and KEY_TAKEAWAYS.md. Added the git-playground-task1 exercise to PORTFOLIO.md (2026-07-24).
 
 _Keep this file current. Update focus, course status, and recent activity as work happens._

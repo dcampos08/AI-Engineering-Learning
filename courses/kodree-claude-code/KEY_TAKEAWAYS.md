@@ -1,6 +1,6 @@
 # Kodree Claude Code — Key Takeaways
 
-Distilled lessons from the course so far (through Part 22). These are verified takeaways, not a summary of undocumented modules.
+Distilled lessons from the course so far (through Part 25). These are verified takeaways, not a summary of undocumented modules.
 
 ## Workflow discipline
 
@@ -18,6 +18,8 @@ Distilled lessons from the course so far (through Part 22). These are verified t
 - The core loop: `git status` → `git add` → `git diff --cached` (review what's staged) → `git commit` → `git push`.
 - Contributing back to an upstream project goes through a pull request from your fork to the original repo.
 - **Clone once, checkout often.** `git clone` creates the local folder one time; `git checkout` only switches which version of the files is in that folder, and `git pull` is what fetches newer work. When instructions say "clone the repo", check `git remote -v` in the folder you suspect you already have it in first.
+- **Claude reads your repo on demand.** Asking "what have I changed?" runs the equivalent of `git status` and `git diff` and explains the result in plain English.
+- **Git archaeology.** Claude can search past commits and their diffs to answer how the code got the way it is — useful for understanding unfamiliar history, not just current changes.
 
 ## Sessions and context
 
@@ -25,6 +27,8 @@ Distilled lessons from the course so far (through Part 22). These are verified t
 - Approved edits are real and persist; exiting never loses your work, and sessions are saved so you can resume.
 - Match the re-entry to the task: `claude --continue` (`-c`) to carry on the last session, `/resume` to pick an older one, a fresh session when the task is unrelated. When a session's memory gets cluttered, `/clear` (or a new session) often sharpens answers.
 - Keep `/clear` (empty but stay), `/exit` (leave), and `--continue` (reopen) straight — they're easy to confuse.
+- **Context is a resource, not just a metaphor.** Everything Claude knows in a session lives in a fixed-size window; reading big files and long outputs fills it fastest, so feeding Claude only what the task needs keeps a session lean.
+- **Manage context proactively rather than waiting for auto-compact.** Auto-compact fires automatically when the window nearly fills, but that's the worst case since it happens mid-moment, not when you choose. `/compact` summarizes the session yourself — keeping decisions, file paths, and what's left, while dropping the noise.
 
 ## Prompts and the edit loop
 
@@ -63,6 +67,7 @@ Distilled lessons from the course so far (through Part 22). These are verified t
 - **Match the model tier to the judgment a task needs.** Opus is most capable but slowest and priciest; Haiku is fastest and cheapest and shines on simple, well-defined work; Sonnet sits in between and is the sensible default for most real work.
 - **Don't default to Opus for everything "to be safe."** That just means paying more and waiting longer for work that didn't need it.
 - **Switch mid-session with `/model <name>`** rather than starting a new session, moving up the tier as a task gets harder and down as it gets simpler.
+- **Opusplan is a built-in hybrid:** Opus plans (the part needing the most reasoning), then hands off to Sonnet to execute (the part needing steady work). Start with `claude --model opusplan`, or pick it from the `/model` list.
 
 ## Promoted to playbooks
 

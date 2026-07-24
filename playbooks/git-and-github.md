@@ -59,6 +59,10 @@ git commit            # record
 git push              # upload to remote
 ```
 
+## Reading history
+
+Ask Claude to do git archaeology when you need to understand how the code got the way it is, not just what changed now — it searches past commits and their diffs and explains the answer.
+
 ## Habits
 
 - Check `git status` often to stay oriented.

@@ -51,6 +51,13 @@ If an action is both allowed and denied, **deny wins**. Put shared rules in `.cl
 - `claude --continue` (`-c`) reopens the most recent session with its context; `/resume` lists past sessions to pick an older one.
 - Start a fresh session for an unrelated task. When a session's memory gets cluttered, `/clear` empties the conversation but keeps you in place, which often sharpens answers.
 - `/context` shows how full the working memory is. Don't confuse `/clear` (empty, stay), `/exit` (leave), and `--continue` (reopen).
+- Context is a limited, fixed-size resource — big file reads and long outputs fill it fastest, so feed Claude only what the task needs.
+- Manage context proactively instead of waiting for auto-compact, which fires automatically when the window nearly fills but strikes mid-moment, not when you choose. Run `/compact` yourself to summarize the session — it keeps decisions, file paths, and what's left, and drops the noise.
+
+## Reading repo state
+
+- Ask "what have I changed?" and Claude runs the equivalent of `git status` and `git diff`, explaining the result in plain English.
+- For history, ask Claude to do git archaeology — search past commits and their diffs to explain how the code got the way it is, not just what changed now.
 
 ## Plan before executing
 
@@ -84,6 +91,7 @@ The hard part is knowing when to stop looping. Approve too early and you miss mi
 - Three tiers: **Opus** (most capable, slowest, priciest), **Sonnet** (the sensible default for most real work), **Haiku** (fastest, cheapest, good for simple well-defined work).
 - Match the tier to how much judgment the task needs — the more judgment required, the higher the tier; the more mechanical the task, the lower. Defaulting to Opus for everything "to be safe" just costs more and takes longer without a benefit.
 - Switch mid-session with `/model <model name>` instead of starting a new session — move up when a task gets harder, down when it gets simpler.
+- **Opusplan** is a built-in hybrid: Opus plans (the part needing the most reasoning), then hands off to Sonnet to execute (the part needing steady work). Start with `claude --model opusplan`, or pick it from the `/model` list.
 
 ## Running tasks
 
